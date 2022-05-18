@@ -13,7 +13,13 @@
             </p>
 
             {% if target_user == user %}
-            <a href="{% url 'accoutapp:update' pk=user%}">
+            <a href="{% url 'accoutapp:update' pk=user.pk %}">
+                <p>
+                    Change Info
+                </p>
+            </a>
+
+            <a href="{% url 'accoutapp:delete' pk=user.pk %}">
                 <p>
                     Change Info
                 </p>

@@ -187,3 +187,8 @@ CACHES = {
 
 LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+
+MEDIA_URL = '/media/'
+
+#11강에서 추가함
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

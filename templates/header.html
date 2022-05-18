@@ -1,12 +1,32 @@
 <div style="text-align: center; margin:2rem 0; ">
-    <div>
-        <h1 class = "pargmatic_logo";>Pragmatic</h1>
+    <div class="none_decorated";>
+        <a class="none_decorated"; href="{% url 'accountapp:hello_world' %}">
+            <h1 class = "pargmatic_logo";>Pragmatic</h1>
+        </a>
+
     </div>
     <div>
         <span>nav1</span>
         <span>nav2</span>
         <span>nav3</span>
-        <span>nav4</span>
+
+        {% if not user.is_authenticated %}
+            <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
+                <span>login</span>
+            </a>
+            <a  href="{% url 'accountapp:create' %}?next={% url 'accountapp:login' %}">
+                <span>Join</span>
+            </a>
+
+        {% else %}
+            <a href="{% url 'accountapp:detail' pk=user.pk %}">
+                <span>Mypage</span>
+            </a>
+            <a href="{% url 'accountapp:logout' %}?next={{ request.path }}">
+                <span>logout</span>
+            </a>
+        {% endif %}
+
     </div>
 
 </div>

@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
     <div style="border-radius: 1rem; margin: 2rem; text-align: center; " >
+
+    {% if not user.is_authenticated %}
+        <h1>not autenticated</h1>
+    {% elif user.is_authenticated == 'True' %}
+        <h1>autenticated</h1>
+    {% endif %}
+
         <div style="font-family: 'Koulen', cursive;">
             Hello World LIST!
         </div>

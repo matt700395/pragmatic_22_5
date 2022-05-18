@@ -3,9 +3,9 @@
 
     <div>
         <div>
-            <h4>Join</h4>
+            <h4>Change Info </h4>
         </div>
-        <form action="{% url 'accountapp:create' %}" method="post">
+        <form action="{% url 'accountapp:update' pk=user.pk %}" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" class="btn btn-primary">

@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div>
+    <div style="text-align: center">
         <div>
-            <h4>Join</h4>
+            <h4>Login</h4>
         </div>
-        <form action="{% url 'accountapp:create' %}" method="post">
+        <form action="" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" class="btn btn-primary">

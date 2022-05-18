@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <div>
+            <p>
+                {{ target_user.date_joined }}
+            </p>
+        </div>
+        <div>
+            <p>
+                {{ target_user.username }}
+            </p>
+
+            {% if target_user == user %}
+            <a href="{% url 'accoutapp:update' pk=user%}">
+                <p>
+                    Change Info
+                </p>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -186,8 +186,8 @@ CACHES = {
 }
 '''
 
-LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
-LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
+#LOGIN_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
+#LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:hello_world')
 
 MEDIA_URL = '/media/'
 
